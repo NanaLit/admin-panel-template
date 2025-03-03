@@ -1,0 +1,15 @@
+:root {
+    --primary-color: #e6ccff; /* Светло-сиреневый */
+    --secondary-color: #f8f0fa; /* Нежно-розовый */
+    --tertiary-color: #ffffff; /* Белый */
+    --accent-color: #d8b4fe; /* Более насыщенный сиреневый */
+    --text-color: #333333; /* Темно-серый для текста */
+}
+  
+[data-theme='dark'] {
+    --primary-color: #7a4d8e; /* Темно-сиреневый */
+    --secondary-color: #5c3c6d; /* Темно-розовый */
+    --tertiary-color: #333333; /* Темно-серый */
+    --accent-color: #6c2e8c; /* Более насыщенный темно-сиреневый */
+    --text-color: #ffffff; /* Белый для текста */
+}
