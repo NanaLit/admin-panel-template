@@ -1,0 +1,15 @@
+@function calcVW($px) {
+	@return (calc($px / 1920) * 100) + vw;
+}
+
+@function calcVW1200($px) {
+	@return (calc($px / 1200) * 100) + vw;
+}
+
+@function calcVW768($px) {
+	@return (calc($px / 768) * 100) + vw;
+}
+
+@function calcVH($px) {
+	@return (calc($px / 1080) * 100) + vh;
+}

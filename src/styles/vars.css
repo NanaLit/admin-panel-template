@@ -4,6 +4,23 @@
     --tertiary-color: #ffffff; /* Белый */
     --accent-color: #d8b4fe; /* Более насыщенный сиреневый */
     --text-color: #333333; /* Темно-серый для текста */
+    --border-color: #acacbe; 
+    --background-input: #ffffff;
+    --error-color: #f30c18;
+    --button-disabled-background-color: #9e94a8;
+    --button-disabled-color: #201e1e;
+    --button-hover-background-color: #9071ad; 
+    --button-hover-color: #201e1e;
+
+    --border-radius: 20px;
+    --gap-between: 5px;
+    --gap-between-min: 10px;
+    --font-size--text: 16px;
+    --type-of-transition: linear;
+    --transition-duration: 0.3s;
+    --padding-input: 10px;
+    --padding-button: 10px 20px;
+    --padding-left: 20px;
 }
   
 [data-theme='dark'] {
@@ -12,4 +29,11 @@
     --tertiary-color: #333333; /* Темно-серый */
     --accent-color: #6c2e8c; /* Более насыщенный темно-сиреневый */
     --text-color: #ffffff; /* Белый для текста */
+    --border-color: #1e1e53;
+    --background-input: #cdceb8;
+    --error-color: #520408;
+    --button-disabled-background-color: #808072;
+    --button-disabled-color: #1e202096;
+    --button-hover-background-color: #71ad7e; 
+    --button-hover-color: #0edf4d;
 }

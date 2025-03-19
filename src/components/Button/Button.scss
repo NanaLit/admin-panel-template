@@ -1,0 +1,20 @@
+.button {
+    border: 1px solid var(--border-color);
+    padding: var(--padding-button);
+    width: 40%;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    outline: none;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    transition: all var(--type-of-transition) var(--transition-duration);
+    &:disabled {
+        background-color: var(--button-disabled-background-color);
+        color: var(--button-disabled-color);
+        cursor: default;
+    }
+    &:hover {
+        background-color: var(--button-hover-background-color);
+        color: var(--button-hover-color);
+    }
+}

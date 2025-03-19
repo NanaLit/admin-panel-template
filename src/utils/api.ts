@@ -28,6 +28,7 @@ $api.interceptors.response.use(
         }
 );
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const loginApi = async (email: string, password:string): Promise<any> => {
     if (!email || !password) {
         throw new Error('Имя и пароль обязательны');
@@ -39,6 +40,7 @@ const loginApi = async (email: string, password:string): Promise<any> => {
             password
         });
         return response.data;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
         if (axios.isAxiosError(error)) {
             console.error('Ошибка при входе:', error.message);
@@ -68,8 +70,47 @@ const refresh = async () => {
     }
 };
 
+const registerApi = async (
+    username: string,
+    email: string,
+    password: string,
+    profilePicture?: File
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+): Promise<any> => {
+    if (!username || !email || !password) {
+        throw new Error('Имя пользователя, email и пароль обязательны');
+    }
+
+    const formData = new FormData();
+    
+        formData.append('username', username);
+        formData.append('email', email);
+        formData.append('password', password);
+        formData.append('foldername', 'auth');
+        if (profilePicture) {
+            formData.append('profilePicture', profilePicture);
+        }
+
+    try {
+        const response = await axios.post(`${SERVER_URL}/auth/register`, formData);
+        return response.data;
+    } catch (error: unknown) {
+        if (axios.isAxiosError(error)) {
+            console.error('Ошибка при регистрации:', error.message);
+            return error.response;
+        } else {
+            console.error('Неизвестная ошибка:', error);
+            return {
+                status: 500,
+                data: { message: 'Неизвестная ошибка' }
+            };
+        }
+    }
+};
+
 
 export { 
     loginApi,
-    refresh
+    refresh,
+    registerApi
 };
